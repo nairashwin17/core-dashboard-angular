@@ -1,0 +1,78 @@
+<div class="flex-1 p-6">
+    <h1 class="title page__title h3">Customer Listing</h1>
+    <!-- Main Content Body -->
+    <div class="custholder mt-6 bg-white shadow-md p-6">
+      <!-- Your main content goes here -->
+     <div class="cust-list">
+        
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs uppercase">
+            <tr>
+                <th class="px-6 py-3">
+                    <input id="checked-checkbox" [checked]="allChecked" (change)="checkAll($event)" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                </th>
+                <th class="px-6 py-3">
+                   Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+                @for (data of customerList; track data) {
+                    <tr class="pointer bg-white border-b dark:bg-gray-800 dark:border-gray-700" (click)="onDataClick(data)">
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" [checked]="data.checked" (change)="checkboxChanged()" id="checked-checkbox" />
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="userdata">
+                            <img [src]=data.image_url alt="user">
+                            <div class="users">
+                                <p>{{data.name}}</p>
+                                <p><i>&#64;</i>{{data.username}}</p>
+                            </div>
+                        </div>
+                    </td>                  
+            </tr>
+                }
+
+        </tbody>
+    </table>
+</div>
+
+     </div>
+     <div class="cust-detail">
+        <div class="detailholder">
+            <div class="custhead">
+                <img [src]=selectImage alt="user" />
+                <div class="custusers">
+                    <p class="custh1">{{selectedName ? selectedName : "Dummy Name" }}</p>
+                    <p class="custp"><i>&#64;</i>{{selectUsername ? selectUsername: "Dummy Username"}}</p>
+                </div>
+
+                <div class="custrightbtns">
+                    <button type="button" class="followbtn text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2 mb-2">
+                        Follow&nbsp;
+                        <svg class="w-6 h-6 fill-current text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                          </svg>
+                        </button>
+                        &nbsp;
+                        <button type="button" class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2 mb-2">
+                            Message 
+                            &nbsp;
+                            <svg class="w-6 h-6  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+                              </svg>
+                              
+                        </button>
+                </div>
+            </div>
+
+            <div class="custbody">
+                UI pending due to time constraint
+            </div>
+        </div>
+     </div>
+    </div>
+</div>

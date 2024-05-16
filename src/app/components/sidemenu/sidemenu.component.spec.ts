@@ -6,10 +6,12 @@ describe('SidemenuComponent', () => {
   let component: SidemenuComponent;
   let fixture: ComponentFixture<SidemenuComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SidemenuComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [SidemenuComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(SidemenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

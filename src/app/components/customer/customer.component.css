@@ -1,0 +1,78 @@
+.title{
+    font-size: 40px;
+}
+.custholder{
+    display: flex;
+    flex: 100%;
+    max-width: 100%;
+}
+.cust-list{
+    flex: 40%;
+    max-width: 40%;
+}
+.cust-detail{
+    flex: 60%;
+    max-width: 60%;
+    margin: 20px 40px;
+}
+.userdata{
+    display: flex;
+}
+.userdata img{
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.custhead{
+    display: flex;
+    flex-direction: row;
+}
+.custhead img{
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 24px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.custh1{
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -.02em;
+}
+.custp{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.23077;
+    color: #9A9FA5;
+}
+.custrightbtns{
+    width: 55%;
+    text-align: right;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.followbtn{
+    color: #000;
+    background: none;
+    box-shadow: 0 0 0 2px #EFEFEF inset;
+}
+
+.followbtn svg{
+    color: #000;
+}
+
+.custbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
